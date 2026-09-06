@@ -36,8 +36,8 @@ SELECT
     productos.nombre,
     productos.categoria,
     productos.precio
-FROM ventas
-LEFT JOIN productos
+FROM productos
+RIGHT JOIN ventas
    ON ventas.producto_id = productos.producto_id
 WHERE productos.nombre IS NULL;
 
